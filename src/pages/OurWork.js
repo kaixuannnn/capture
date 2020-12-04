@@ -7,8 +7,12 @@ import theracer from '../img/theracer-small.png';
 import goodtimes from '../img/goodtimes-small.png';
 import {motion} from 'framer-motion';
 import {sliderContainer, slider, pageAnimation, fade, photoAnim, lineAnim} from "../animation";
+import {useScroll} from '../Components/useScroll'
+
 
 const OurWork =()=>{
+    const [element, controls] = useScroll();
+    const [element2, controls2] =useScroll();
     return(
         <Work exit="exit"
         variants={pageAnimation}
@@ -24,23 +28,30 @@ const OurWork =()=>{
             <Movie>
                 <motion.h2 variants={fade}>The Athlete</motion.h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
-                <Link><Hide>
-                <motion.img variants={photoAnim} src={athlete} alt=""/></Hide>
+                <Link to="/work/the-athlete">
+                    <Hide>
+                        <motion.img variants={photoAnim} src={athlete} alt=""/>
+                    </Hide>
                 </Link>
             </Movie>
-            <Movie>
+
+            <Movie ref={element} variants={fade} animate={controls} initial="hidden">
                 <h2>The Racer</h2>
-                <div className="line"></div>
-                <Link>
-                <img src={theracer} alt=""/>
-                </Link>
+                <motion.div variants={lineAnim} className="line"></motion.div>
+                    <Link to="/work/the-racer">
+                        <Hide>
+                            <motion.img src={theracer} alt=""/>
+                        </Hide>
+                    </Link>
             </Movie>
-            <Movie>
+            <Movie ref={element2} variants={fade} animate={controls2} initial="hidden">
                 <h2>The GoodTimes</h2>
-                <div className="line"></div>
-                <Link>
-                <img src={goodtimes} alt=""/>
-                </Link>
+                <motion.div variants={lineAnim} className="line"></motion.div>
+                    <Link>
+                        <Hide>
+                            <motion.img src={goodtimes} alt=""/>
+                        </Hide>
+                    </Link>
             </Movie>
         </Work>
     );
