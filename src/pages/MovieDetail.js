@@ -4,6 +4,7 @@ import {useHistory} from 'react-router-dom';
 import {MovieState} from '../movieState';
 import {motion} from 'framer-motion';
 import {pageAnimation} from "../animation";
+import ScrollTop from '../Components/ScrollTop';
 
 const MovieDetail =()=>{
     const history = useHistory();
@@ -21,6 +22,7 @@ const MovieDetail =()=>{
     
     return(
         <>
+            <ScrollTop />
             {movie && (
                 <Details exit="exit"
                 variants={pageAnimation}

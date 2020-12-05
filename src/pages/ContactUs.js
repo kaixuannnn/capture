@@ -2,6 +2,7 @@ import React from 'react';
 import {motion} from 'framer-motion';
 import {pageAnimation, titleAnim} from "../animation";
 import styled from 'styled-components';
+import ScrollTop from '../Components/ScrollTop';
 
 const ContactUs =()=>{
     return(
@@ -10,6 +11,7 @@ const ContactUs =()=>{
         variants={pageAnimation}
         initial="hidden"
         animate="show">
+            <ScrollTop />
             <Title>
                 <Hide>
                     <motion.h2 variants={titleAnim}>Get in touch.</motion.h2>

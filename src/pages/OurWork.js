@@ -7,7 +7,9 @@ import theracer from '../img/theracer-small.png';
 import goodtimes from '../img/goodtimes-small.png';
 import {motion} from 'framer-motion';
 import {sliderContainer, slider, pageAnimation, fade, photoAnim, lineAnim} from "../animation";
-import {useScroll} from '../Components/useScroll'
+import {useScroll} from '../Components/useScroll';
+import ScrollTop from '../Components/ScrollTop';
+
 
 
 const OurWork =()=>{
@@ -19,6 +21,7 @@ const OurWork =()=>{
         initial="hidden"
         animate="show"
         style={{background: '#fff'}}>
+            <ScrollTop />
             <motion.div variants={sliderContainer}>
                 <Frame1 variants={slider}></Frame1>
                 <Frame2 variants={slider}></Frame2>

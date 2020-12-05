@@ -4,6 +4,7 @@ import FaqSection from '../Components/FaqSection';
 import ServicesSection from '../Components/ServicesSection';
 import {motion} from 'framer-motion';
 import {pageAnimation} from "../animation"
+import ScrollTop from '../Components/ScrollTop';
 
 const AboutUs = () => {
     return(
@@ -11,6 +12,7 @@ const AboutUs = () => {
         variants={pageAnimation}
         initial="hidden"
         animate="show">
+        <ScrollTop />
         <AboutSection />
         <ServicesSection />
         <FaqSection />
