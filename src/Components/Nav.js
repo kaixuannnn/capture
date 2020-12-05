@@ -12,15 +12,15 @@ const Nav = () => {
             <ul>
                 <li>
                     <Link to="/capture">About Us</Link>
-                    <Line transition={{duration: 0.75}} initial={{width:"0%"}} animate={{width: pathname === "/" ? "50%":"0%"}}></Line>
+                    <Line transition={{duration: 0.75}} initial={{width:"0%"}} animate={{width: pathname === "/capture" ? "50%":"0%"}}></Line>
                 </li>
                 <li>
                     <Link to="/capture/work">Our Work</Link>
-                    <Line transition={{duration: 0.75}} initial={{width:"0%"}} animate={{width: pathname === "/work" ? "50%":"0%"}}></Line>
+                    <Line transition={{duration: 0.75}} initial={{width:"0%"}} animate={{width: pathname === "/capture/work" ? "50%":"0%"}}></Line>
                 </li>
                 <li>
                     <Link to="/capture/contact">Contact Us</Link>
-                    <Line transition={{duration: 0.75}} initial={{width:"0%"}} animate={{width: pathname === "/contact" ? "50%":"0%"}}></Line>
+                    <Line transition={{duration: 0.75}} initial={{width:"0%"}} animate={{width: pathname === "/capture/contact" ? "50%":"0%"}}></Line>
                 </li>
             </ul>
         </StyledNav>
