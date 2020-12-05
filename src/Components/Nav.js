@@ -49,6 +49,22 @@ const StyledNav = styled.nav`
         padding-left: 10rem;
         position: relative;
     }
+    @media (max-width: 1300px){
+        flex-direction: column;
+        padding: 2rem 1rem;
+        #logo {
+            display: inline-blocl;
+            margin: 1rem;
+        }
+        ul{
+            padding: 2rem;
+            justify-content: space-around;
+            width: 100%;
+            li{
+                padding: 0;
+            }
+        }
+    }
 `;
 
 export default Nav;
