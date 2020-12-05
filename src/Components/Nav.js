@@ -11,15 +11,15 @@ const Nav = () => {
             <h1><Link id="logo" to="/">Capture</Link></h1>
             <ul>
                 <li>
-                    <Link to="/the-react-course-capture">1. About Us</Link>
+                    <Link to="/capture">About Us</Link>
                     <Line transition={{duration: 0.75}} initial={{width:"0%"}} animate={{width: pathname === "/" ? "50%":"0%"}}></Line>
                 </li>
                 <li>
-                    <Link to="/the-react-course-capture/work">1. Our Work</Link>
+                    <Link to="/capture/work">Our Work</Link>
                     <Line transition={{duration: 0.75}} initial={{width:"0%"}} animate={{width: pathname === "/work" ? "50%":"0%"}}></Line>
                 </li>
                 <li>
-                    <Link to="/the-react-course-capture/contact">1. Contact Us</Link>
+                    <Link to="/capture/contact">Contact Us</Link>
                     <Line transition={{duration: 0.75}} initial={{width:"0%"}} animate={{width: pathname === "/contact" ? "50%":"0%"}}></Line>
                 </li>
             </ul>
